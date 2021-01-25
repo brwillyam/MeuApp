@@ -235,13 +235,117 @@ namespace MeuApp
             Menu();
         }
 
-        static void VerdadeiroOuFalso(){
+        static void VerdadeiroOuFalso()
+        {
+
         Console.Clear();
-        Console.WriteLine("Bem vindo ao verdadei ou falso..");
-        Console.WriteLine("Responda as perguntas com 'v' ou 'f' ");
+        Console.WriteLine("Bem vindo ao verdadeiro ou falso!!");
+        Console.WriteLine("Responda as perguntas com 'v' ou 'f': ");
+        Console.WriteLine("Todas as perguntas sao referentes ao c#:");
+
+        Console.Clear();
+        
+        PerguntaVouF("1) É possivel afirmar que o tipo condicional 'if' eh igual 'se'.", "verdadeiro", "falso", true);
+        PerguntaVouF("2) Usar '.ToString' convertemos um tipo para Boolean.", "verdadeiro", "falso", false);
+        PerguntaVouF("3) C# eh fortemente tipado:", "verdadeiro","falso", true);
+        PerguntaVouF("4) Double eh uma variavel do tipo inteiro:", "verdadeiro", "falso", false);
+        PerguntaVouF("5) Para definir uma variavel float devemos sempre usar 'm' .:", "verdadeiro", "falso", false);
+        PerguntaVouF("6) Em: var = 12.2; a variavel var é igual a uma do tipo Double.", "verdadeiro", "falso", true);
+        PerguntaVouF("7) Para limpar a tela usamos 'Console.Clear' .", "verdadeiro", "falso", true);
+
+        Console.Clear();
+        Console.WriteLine("PARABENS!!!!");
+        Console.WriteLine("Vc concluiu o verdadeiro ou falso , espero que tenha acertado todas.");
+        Console.WriteLine("Continue se divertindo e aprendendo C#");
+
+        Console.ReadLine();
+        Menu();
+        
+
+        }
+        static void PerguntaVouF(string pergunta, string r1, string r2, Boolean respostaCerta){
+            Console.Clear();
+            System.Console.WriteLine(pergunta);
+            System.Console.WriteLine("v = " + r1);
+            System.Console.WriteLine("f = " + r2);
+            Console.Write("Digite sua resposta:");
+            var res = Console.ReadLine();
+            if(respostaCerta == true){
+                System.Console.WriteLine("Verdadeiro");
+            }
+            else
+            {
+                System.Console.WriteLine("Falso");
+            }
+            Console.ReadLine();
+
         
         }
-        static void Numeros(){}
 
+        static void Numeros()
+        {
+            Console.Clear();
+            Console.WriteLine("Bem vindo a parte de calculos :");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("Calma nao sera nada muito complicado, vc so precisa dar o resultado.");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("Até pq nao sou muito bom com calculos 'kkkkkkk' ");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("E estou apenas comecando como programador...");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("Nao use o ' . ' ou ' , ' responda somente valores inteiros sem decimal :");
+            Thread.Sleep(2500);
+            Console.Clear();
+            Console.WriteLine("Vamoa comecar!!!");  
+
+            Console.ReadLine();
+
+            Console.Clear();
+
+            PerguntaNum("A soma : 127 + 676 é igual a:", 803);
+            PerguntaNum("A divisao : 5783 / 27 e igual a:", 214);
+            PerguntaNum("A multiplicação: 231 * 7.23 é igual a:", 1670);
+            PerguntaNum("A subtracao: 13.683 - 2.358 é igual a:", 11325);
+            PerguntaNum("A raiz quadrada de 1582 é:", 39);
+            PerguntaNum("A equacao: 5 + 2 -(25 / 3) é igual a:", -1);
+            PerguntaNum("A equacao: 258 - 32 *(125 / 5) é igual a:", -542);
+
+            Console.Clear();
+            Console.WriteLine("Parabens vc completou o modo numeros!!");
+            Thread.Sleep(2000);
+            Console.Clear();
+            Console.WriteLine("Espero que tenha se divertido e acertado as perguntas");
+            Thread.Sleep(2000);
+            Console.Clear();
+
+            Console.WriteLine("VOLTE SEMPRE!!");
+
+            Menu();
+
+
+
+        }
+        static void PerguntaNum(string pergunta, double respostaCerta)
+        {
+            Console.Clear();
+            System.Console.WriteLine(pergunta);
+            Console.Write("Digite sua resposta:");
+            var res = Console.ReadLine();
+            if(res == respostaCerta.ToString())
+            {
+                System.Console.WriteLine("Resposta CERTA!");
+            }
+            else
+            {
+                System.Console.WriteLine("Resposta Errada.");
+            }
+            Console.ReadLine();
+
+        
+        }
     }
 }
